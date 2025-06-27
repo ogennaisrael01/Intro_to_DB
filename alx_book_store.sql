@@ -33,8 +33,9 @@ CREATE TABLE Orders(
 
 CREATE TABLE Order_datails(
     order_detail_id INT PRIMARY KEY AUTOINCREMENT,
-    order_id INT  FOREIGN KEY REFERENCES Orders(order_id),
+    order_id INT,
     book_id INT,
     quantity DOUBLE,
-    FOREIGN KEY(book_id) REFERENCES Books(book_id)
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+    FOREIGN KEY (book_id) REFERENCES Books(book_id)
     );
