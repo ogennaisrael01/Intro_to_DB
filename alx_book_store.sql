@@ -31,7 +31,7 @@ CREATE TABLE Orders(
     FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
     );
 
-CREATE TABLE Order_datails(
+CREATE TABLE Order_Details(
     order_detail_id INT PRIMARY KEY AUTOINCREMENT,
     order_id INT,
     book_id INT,
