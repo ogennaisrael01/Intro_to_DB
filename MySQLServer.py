@@ -12,7 +12,7 @@ def connect_db():
         )
         return connection
 
-    except (mysql.connector.Error, Exception) as e:
+    except mysql.connector.Error as e:
         print(f"Error: {e}")
 
 def create_database():
@@ -23,6 +23,6 @@ def create_database():
         
         connection.commit()
         print("Database 'alx_book_store' created successfully!")
-    except (mysql.connector.Error, Exception) as e:
+    except mysql.connector.Error as e:
         print(f"Error creating database: {e}")
 create_database()
